@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your International Choice | Agencia de Estudios en el Exterior</title>
+<meta name="description" content="Your International Choice (YIC) es tu agencia de estudios en el exterior en Ecuador. Programas de idiomas, grupos de colegio, Au Pair, estudio y trabajo, educación superior y consultoría de visas.">
+<link rel="icon" href="images/logo-yic.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#132740;
+    --blue:#0d62a3;
+    --cyan:#2aadd9;
+    --gold:#b68413;
+    --white:#ffffff;
+    --gray-light:#f4f7fa;
+    --gray-text:#4a5a6a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    color:var(--navy);
+    line-height:1.65;
+    background:var(--white);
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,h5{
+    font-family:'Outfit',sans-serif;
+    font-weight:700;
+    color:var(--navy);
+    line-height:1.12;
+    letter-spacing:-.6px;
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  svg{display:block;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:15px 36px;
+    background:var(--gold);
+    color:var(--white);
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:700;
+    letter-spacing:.2px;
+    border-radius:50px;
+    border:none;
+    cursor:pointer;
+    transition:.25s;
+    font-size:1rem;
+  }
+  .btn:hover{background:var(--navy);transform:translateY(-2px);}
+  .btn-outline{
+    background:transparent;
+    border:2px solid var(--white);
+    color:var(--white);
+  }
+  .btn-outline:hover{background:var(--white);color:var(--navy);}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:700;
+    color:var(--cyan);
+    font-size:.82rem;
+    margin-bottom:10px;
+    display:block;
+  }
+  section{padding:90px 0;}
+  .section-head{text-align:center;max-width:680px;margin:0 auto 56px;}
+  .section-head h2{font-size:2.4rem;margin-bottom:14px;}
+  .section-head p{color:var(--gray-text);font-size:1.05rem;}
+  .icon-wrap{display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .icon-wrap svg{width:60%;height:60%;}
+
+  /* HEADER */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 2px 18px rgba(19,39,64,.08);
+  }
+  .nav-wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 24px;max-width:1180px;margin:0 auto;
+  }
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo img{height:52px;width:auto;}
+  .logo-text{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.15rem;color:var(--navy);line-height:1.1;}
+  .logo-text span{display:block;font-family:'Outfit',sans-serif;font-weight:500;font-size:.65rem;letter-spacing:1px;color:var(--gold);text-transform:uppercase;}
+  nav ul{display:flex;gap:34px;align-items:center;}
+  nav a{font-weight:500;font-size:.95rem;color:var(--navy);transition:.2s;}
+  nav a:hover{color:var(--cyan);}
+  .nav-cta{
+    background:var(--navy);color:var(--white)!important;
+    padding:11px 26px;border-radius:50px;font-weight:600;
+  }
+  .nav-cta:hover{background:var(--gold);}
+  .burger{display:none;font-size:1.8rem;background:none;border:none;color:var(--navy);cursor:pointer;}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);
+    color:var(--white);
+    padding:170px 0 100px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+    border-radius:50%;background:radial-gradient(circle,rgba(42,173,217,.35) 0%,transparent 70%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2;}
+  .hero-eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-weight:700;font-size:.85rem;margin-bottom:16px;display:block;}
+  .hero h1{font-size:3.1rem;color:var(--white);margin-bottom:20px;}
+  .hero h1 em{font-style:normal;color:var(--cyan);}
+  .hero p{font-size:1.08rem;color:#dce6ef;max-width:520px;margin-bottom:34px;}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-stats{display:flex;gap:44px;margin-top:56px;}
+  .hero-stats div strong{display:block;font-size:2.2rem;font-family:'Outfit',sans-serif;font-weight:800;color:var(--gold);}
+  .hero-stats div span{font-size:.85rem;color:#c7d6e3;}
+  .hero-collage{position:relative;height:460px;}
+  .hero-collage img{
+    position:absolute;border-radius:16px;object-fit:cover;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);border:4px solid rgba(255,255,255,.15);
+  }
+  .hc1{width:62%;height:340px;top:0;left:0;z-index:2;}
+  .hc2{width:48%;height:220px;bottom:0;right:0;z-index:3;}
+  .hc3{width:38%;height:150px;top:60px;right:-10px;z-index:1;}
+
+  /* MARQUEE STRIP */
+  .strip{background:var(--gold);color:var(--white);padding:14px 0;overflow:hidden;}
+  .strip-inner{display:flex;gap:60px;white-space:nowrap;animation:scroll 26s linear infinite;font-family:'Outfit',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:.9rem;}
+  @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+  /* SOBRE NOSOTROS */
+  .about{background:var(--gray-light);}
+  .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center;}
+  .about-imgs{position:relative;height:420px;}
+  .about-imgs img{position:absolute;border-radius:14px;object-fit:cover;box-shadow:0 16px 32px rgba(19,39,64,.18);}
+  .ai1{width:72%;height:320px;left:0;top:0;}
+  .ai2{width:48%;height:200px;right:0;bottom:0;border:6px solid var(--white);}
+  .about-text .eyebrow{color:var(--gold);}
+  .about-text h2{font-size:2.2rem;margin-bottom:18px;}
+  .about-text p{color:var(--gray-text);margin-bottom:16px;}
+  .about-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px;}
+  .about-list li{display:flex;align-items:center;gap:10px;font-weight:500;font-size:.95rem;}
+  .check{
+    width:22px;height:22px;border-radius:50%;background:var(--cyan);color:var(--white);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .check svg{width:12px;height:12px;}
+
+  /* POR QUE NOSOTROS */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .why-card{
+    background:var(--white);border-radius:16px;padding:36px 28px;
+    box-shadow:0 10px 30px rgba(19,39,64,.08);border-top:4px solid var(--gold);
+    transition:.25s;
+  }
+  .why-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(19,39,64,.14);}
+  .why-icon{
+    width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--cyan));
+    color:var(--white);margin-bottom:20px;
+  }
+  .why-card h3{font-size:1.2rem;margin-bottom:10px;}
+  .why-card p{color:var(--gray-text);font-size:.95rem;}
+
+  .achievement{
+    margin-top:56px;background:linear-gradient(120deg,var(--navy),var(--blue));
+    border-radius:20px;padding:44px;color:var(--white);
+    display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;
+  }
+  .achievement .badge{
+    width:84px;height:84px;border-radius:50%;background:var(--gold);
+    color:var(--white);flex-shrink:0;
+  }
+  .achievement h3{color:var(--white);font-size:1.3rem;margin-bottom:8px;}
+  .achievement p{color:#d8e4ee;font-size:.95rem;}
+
+  /* VALORES */
+  .values{background:var(--navy);color:var(--white);}
+  .values .section-head h2{color:var(--white);}
+  .values .section-head p{color:#c7d6e3;}
+  .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .value-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:16px;padding:30px 24px;text-align:center;transition:.25s;
+  }
+  .value-card:hover{background:rgba(255,255,255,.12);}
+  .value-card .n{font-family:'Outfit',sans-serif;font-weight:800;font-size:2rem;color:var(--gold);margin-bottom:12px;}
+  .value-card h4{color:var(--white);font-size:1.05rem;margin-bottom:10px;}
+  .value-card p{color:#c7d6e3;font-size:.88rem;}
+
+  /* SERVICIOS */
+  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .service-chip{
+    background:var(--gray-light);border-radius:14px;padding:26px 18px;text-align:center;
+    border:1px solid #e4ebf1;transition:.2s;
+  }
+  .service-chip:hover{border-color:var(--cyan);background:var(--white);box-shadow:0 10px 24px rgba(19,39,64,.08);}
+  .service-chip .ic{width:44px;height:44px;margin:0 auto 12px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:var(--white);}
+  .service-chip span{font-weight:600;font-size:.92rem;}
+
+  /* PROGRAMAS */
+  .programs{background:var(--gray-light);}
+  .programs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+  .program-card{
+    background:var(--white);border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(19,39,64,.08);
+    text-align:center;transition:.25s;
+  }
+  .program-card:hover{transform:translateY(-6px);}
+  .program-card .pc-top{background:linear-gradient(135deg,var(--blue),var(--cyan));padding:26px 10px;color:var(--white);}
+  .program-card .pc-top .icon-wrap{width:100%;height:44px;}
+  .program-card .pc-top svg{width:30px;height:30px;}
+  .program-card p{padding:16px 10px;font-weight:600;font-size:.92rem;}
+
+  /* DESTINOS */
+  .destinos-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+  .destino{
+    position:relative;border-radius:12px;overflow:hidden;height:150px;
+    background-color:var(--navy);background-size:cover;background-position:center;
+    display:flex;align-items:flex-end;padding:14px;color:var(--white);
+    font-family:'Outfit',sans-serif;font-weight:700;letter-spacing:.3px;font-size:.85rem;
+    transition:.3s;
+  }
+  .destino::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(19,39,64,.05) 0%,rgba(19,39,64,.15) 45%,rgba(19,39,64,.85) 100%);
+    z-index:0;
+  }
+  .destino span{position:relative;z-index:1;}
+  .destino:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(19,39,64,.25);}
+
+  /* EQUIPO */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;}
+  .team-card{text-align:center;}
+  .team-photo{
+    width:180px;height:180px;border-radius:50%;overflow:hidden;margin:0 auto 20px;
+    border:5px solid var(--gold);box-shadow:0 12px 26px rgba(19,39,64,.15);
+  }
+  .team-photo img{width:100%;height:100%;object-fit:cover;}
+  .team-card h4{font-size:1.15rem;margin-bottom:4px;}
+  .team-card span{color:var(--cyan);font-weight:600;font-size:.88rem;text-transform:uppercase;letter-spacing:.5px;}
+
+  /* LOGROS / TESTIMONIOS */
+  .stories{background:var(--navy);color:var(--white);}
+  .stories .section-head h2{color:var(--white);}
+  .stories .section-head p{color:#c7d6e3;}
+  .story-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;padding:36px;max-width:820px;margin:0 auto;
+  }
+  .story-card .quote-mark{color:var(--gold);margin-bottom:8px;}
+  .story-card .quote-mark svg{width:38px;height:38px;}
+  .story-card p{color:#dce6ef;font-size:1.05rem;margin:18px 0;}
+  .story-card .who{font-weight:700;color:var(--white);}
+  .story-card .who span{display:block;font-weight:400;color:var(--cyan);font-size:.85rem;}
+  .story-note{
+    text-align:center;margin-top:22px;font-size:.82rem;color:#9db3c4;font-style:italic;
+  }
+
+  /* CONTACTO */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .contact-info h2{font-size:2.2rem;margin-bottom:16px;}
+  .contact-info p{color:var(--gray-text);margin-bottom:30px;}
+  .contact-item{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start;}
+  .contact-item .ic{
+    width:46px;height:46px;border-radius:12px;background:var(--gold);color:var(--white);
+    flex-shrink:0;
+  }
+  .contact-item .ic svg{width:22px;height:22px;}
+  .contact-item h5{font-size:.95rem;margin-bottom:2px;}
+  .contact-item p{margin:0;color:var(--gray-text);font-size:.92rem;}
+  .social-row{display:flex;gap:12px;margin-top:8px;}
+  .social-row a{
+    width:42px;height:42px;border-radius:50%;background:var(--navy);
+    display:flex;align-items:center;justify-content:center;transition:.2s;overflow:hidden;
+  }
+  .social-row a img{width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);}
+  .social-row a:hover{background:var(--gold);transform:translateY(-3px);}
+  .contact-form-wrap{
+    background:var(--gray-light);border-radius:20px;padding:36px;
+  }
+  .contact-form-wrap .form-note{font-size:.82rem;color:var(--gray-text);margin-top:14px;text-align:center;}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:#c7d6e3;padding:56px 0 24px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:40px;}
+  .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+  .footer-logo img{height:46px;}
+  .footer-logo span{font-family:'Outfit',sans-serif;font-weight:800;color:var(--white);font-size:1.1rem;}
+  footer h5{color:var(--white);font-family:'Outfit',sans-serif;margin-bottom:18px;font-size:1rem;}
+  footer ul li{margin-bottom:10px;font-size:.9rem;}
+  footer a:hover{color:var(--gold);}
+  .footer-social{display:flex;gap:10px;margin-top:18px;}
+  .footer-social a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+  .footer-social a img{width:16px;height:16px;filter:brightness(0) invert(1);}
+  .footer-social a:hover{background:var(--gold);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);padding-top:22px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem;
+  }
+
+  /* RESPONSIVE */
+  @media(max-width:960px){
+    nav ul{display:none;}
+    .burger{display:block;}
+    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:2.3rem;}
+    .why-grid{grid-template-columns:1fr 1fr;}
+    .values-grid{grid-template-columns:1fr 1fr;}
+    .services-grid{grid-template-columns:1fr 1fr;}
+    .programs-grid{grid-template-columns:1fr 1fr;}
+    .destinos-grid{grid-template-columns:1fr 1fr;}
+    .team-grid{grid-template-columns:1fr;max-width:320px;margin:0 auto;}
+    .footer-grid{grid-template-columns:1fr;}
+    .achievement{grid-template-columns:1fr;text-align:center;}
+    .achievement .badge{margin:0 auto;}
+    .hero-collage{height:320px;margin-top:20px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="#inicio" class="logo">
+      <img src="images/logo-yic.png" alt="Logo Your International Choice">
+      <div class="logo-text">YIC <span>Your International Choice</span></div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#programas">Programas</a></li>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto" class="nav-cta">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <button class="burger">&#9776;</button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-eyebrow">Agencia de estudios en el exterior · Ecuador</span>
+      <h1>Tu mundo <em>empieza</em> con la elección correcta.</h1>
+      <p>Más de 10 años creando experiencias únicas de intercambio para grupos de colegio y personas individuales en Ecuador. Cursos de idioma, Au Pair, estudio y trabajo, educación superior y consultoría de visas: te acompañamos en cada paso.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn">Da el primer paso</a>
+        <a href="#programas" class="btn btn-outline">Ver programas</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>10+</strong><span>Años de experiencia</span></div>
+        <div><strong>10+</strong><span>Destinos internacionales</span></div>
+        <div><strong>100%</strong><span>Acompañamiento personalizado</span></div>
+      </div>
+    </div>
+    <div class="hero-collage">
+      <img class="hc1" src="images/experiencia-5.jpeg" alt="Estudiantes YIC en intercambio internacional">
+      <img class="hc2" src="images/experiencia-4.jpeg" alt="Estudiante YIC en Londres">
+      <img class="hc3" src="images/experiencia-2.jpeg" alt="Estudiantes YIC en clase en el exterior">
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-inner">
+    <span>★ Cursos de idioma</span><span>★ Grupos de colegio</span><span>★ Estudio y trabajo</span><span>★ Educación superior</span><span>★ Au Pair</span><span>★ Consultoría de visas</span>
+    <span>★ Cursos de idioma</span><span>★ Grupos de colegio</span><span>★ Estudio y trabajo</span><span>★ Educación superior</span><span>★ Au Pair</span><span>★ Consultoría de visas</span>
+  </div>
+</div>
+
+<section class="about" id="nosotros">
+  <div class="container about-grid">
+    <div class="about-imgs">
+      <img class="ai1" src="images/experiencia-1.jpeg" alt="Delegación de estudiantes YIC">
+      <img class="ai2" src="images/experiencia-6.jpeg" alt="Estudiante YIC con premio internacional">
+    </div>
+    <div class="about-text">
+      <span class="eyebrow">Sobre nosotros</span>
+      <h2>Your International Choice</h2>
+      <p>Nuestra misión es transformar vidas por medio de la educación internacional. Somos tu agencia de estudios en el exterior en Ecuador, con más de una década ayudando a estudiantes y familias a cumplir el sueño de vivir una experiencia internacional.</p>
+      <p>Acompañamos a grupos de colegio y a personas individuales desde la elección del programa hasta el regreso a casa, con asesoría cercana en cada etapa del proceso.</p>
+      <ul class="about-list">
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Trámites de visa</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Traducciones oficiales</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Financiamiento</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Asesoría estudiantil</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Seguro médico</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Pasajes aéreos</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programas">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--gold);">Nuestros programas</span>
+      <h2>Un programa para cada sueño</h2>
+      <p>Desde cursos de idioma hasta educación superior: te asesoramos paso a paso durante todo el proceso.</p>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="pc-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M21 12a9 9 0 10-4.5 7.79L21 21l-1.21-3.5A8.96 8.96 0 0021 12z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <p>Cursos de idioma en destino</p>
+      </div>
+      <div class="program-card">
+        <div class="pc-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M12 14a4 4 0 004-4V6a4 4 0 00-8 0v4a4 4 0 004 4z" stroke="currentColor" stroke-width="1.8"/><path d="M8 8H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div></div>
+        <p>Grupos de colegio</p>
+      </div>
+      <div class="program-card">
+        <div class="pc-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div></div>
+        <p>Estudio y trabajo</p>
+      </div>
+      <div class="program-card">
+        <div class="pc-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L2 8l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div></div>
+        <p>Educación superior en el exterior</p>
+      </div>
+      <div class="program-card">
+        <div class="pc-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="9" r="2.4" stroke="currentColor" stroke-width="1.8"/><path d="M3 20c0-3 2.7-5.5 6-5.5s6 2.5 6 5.5M15.5 14.7c2.2.4 3.5 2.2 3.5 4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div></div>
+        <p>Au Pair</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--gold);">Servicios de apoyo</span>
+      <h2>Te acompañamos en todo</h2>
+      <p>Servicios de acompañamiento integral para que tu experiencia en el exterior sea segura y sin contratiempos.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="10" r="2" stroke="currentColor" stroke-width="1.7"/><path d="M6 16c.5-1.8 2-2.5 3-2.5s2.5.7 3 2.5M15 8h4M15 12h4M15 16h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <span>Trámites de visa</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 17h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <span>Traducciones oficiales</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 9.5h19" stroke="currentColor" stroke-width="1.7"/><path d="M6 14.5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <span>Financiamiento</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M6.5 10v4.5c0 1.4 2.5 3 5.5 3s5.5-1.6 5.5-3V10" stroke="currentColor" stroke-width="1.7"/><path d="M21 7.5V14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <span>Asesoría estudiantil</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4.5" stroke="currentColor" stroke-width="1.7"/><path d="M8 12l-2 8 6-3 6 3-2-8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+        <span>Certificados internacionales</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C.5 8.3 3 4.5 7 4.5c2 0 3.6 1.1 4.5 2.6C12.4 5.6 14 4.5 16 4.5c4 0 6.5 3.8 4.5 7.5-2.5 4.5-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12h2l1-2 1.5 4L15 12h1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span>Seguro médico</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M10.5 15.5L3 12.7c-.6-.2-.6-1 0-1.2l16-6.4c.6-.2 1.1.3.9.9l-6.4 16c-.2.6-1 .6-1.2 0l-2.8-7.5-6-3.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+        <span>Pasajes aéreos</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M15 9l-2 5-5 2 2-5 5-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <span>Orientación vocacional</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v9a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1v-9" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+        <span>Alojamiento estudiantil</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M7 8h10M7 11.5h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <span>Cursos de idioma</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <span>Asistencia laboral</span>
+      </div>
+      <div class="service-chip">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 21V9l8-5 8 5v12" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 21v-6h6v6M4 21h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <span>Capacitaciones institucionales</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--gold);">Por qué elegirnos</span>
+      <h2>Experiencia comprobada</h2>
+      <p>Equipo especializado y acompañamiento personalizado en cada etapa del proceso, desde la elección del destino hasta el retorno a casa.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon-wrap why-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.6 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.6-3.8-9S9.5 5.4 12 3z" stroke="currentColor" stroke-width="1.7"/></svg></div>
+        <h3>Experiencia exclusiva</h3>
+        <p>Programas en los mejores destinos e instituciones del mundo, adaptados a cada perfil de estudiante.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon-wrap why-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l4-4h3l3 3-1.5 1.5L8 10H6.5L4 12.5M22 12l-4-4h-3l-3 3 1.5 1.5L16 10h1.5l2.5 2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Apoyo completo</h3>
+        <p>Acompañamiento desde el planeamiento del viaje, elección del programa y destino, hasta el regreso.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon-wrap why-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 11l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 16.5h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Gestión integral</h3>
+        <p>Visas, traducciones, seguro médico, pasajes y financiamiento: todo resuelto por un solo equipo.</p>
+      </div>
+    </div>
+
+    <div class="achievement">
+      <div class="icon-wrap badge"><svg viewBox="0 0 24 24" fill="none" style="width:42px;height:42px;"><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 4h10v6a5 5 0 01-10 0V4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 6H5a2 2 0 000 4h2M17 6h2a2 2 0 010 4h-2" stroke="currentColor" stroke-width="1.8"/></svg></div>
+      <div>
+        <h3>Primer lugar para la delegación de APCh en el Global Academic Championship 2026</h3>
+        <p>Detrás de cada logro hay preparación académica, acompañamiento antes, durante y después del programa, y logística internacional. Con Your International Choice no solo organizamos programas en el exterior: ayudamos a que los estudiantes vivan experiencias que transforman su futuro y fortalecen su perfil académico desde temprana edad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Nuestros valores</span>
+      <h2>Lo que nos guía</h2>
+      <p>Los principios detrás de cada programa que diseñamos para ti.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card"><div class="n">01</div><h4>Presteza y rapidez</h4><p>Atención eficiente y ágil, sin abrir mano de la calidad en cada entrega.</p></div>
+      <div class="value-card"><div class="n">02</div><h4>Transparencia y cuidado</h4><p>Claridad en toda la información, con atención constante para garantizar tu confianza.</p></div>
+      <div class="value-card"><div class="n">03</div><h4>Empatía en el trato</h4><p>Te ponemos al centro, escuchando tus necesidades y ofreciendo soluciones a tu medida.</p></div>
+      <div class="value-card"><div class="n">04</div><h4>Foco en tu éxito</h4><p>Trabajamos para que alcances tus objetivos, con soporte completo para tu crecimiento.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="destinos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--gold);">Nuestros mejores destinos</span>
+      <h2>Descubre a dónde puedes llegar</h2>
+      <p>Te guiamos para encontrar el lugar ideal para estudiar, trabajar o vivir una experiencia internacional inolvidable.</p>
+    </div>
+    <div class="destinos-grid">
+      <div class="destino" style="background-image:url('images/destinos/destino-reino-unido.jpg')"><span>Reino Unido</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-republica-checa.jpg')"><span>República Checa</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-francia.jpg')"><span>Francia</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-canada.jpg')"><span>Canadá</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-irlanda.jpg')"><span>Irlanda</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-malta.jpg')"><span>Malta</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-estados-unidos.jpg')"><span>Estados Unidos</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-australia.jpg')"><span>Australia</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-dubai.jpg')"><span>Dubái</span></div>
+      <div class="destino" style="background-image:url('images/destinos/destino-nueva-zelanda.jpg')"><span>Nueva Zelanda</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--gold);">Quién está al frente</span>
+      <h2>Nuestro equipo</h2>
+      <p>Especialistas comprometidos con tu proceso académico y tu crecimiento personal en cada programa.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo"><img src="images/equipo-carlos.png" alt="Carlos Oña, CEO de Your International Choice"></div>
+        <h4>Carlos Oña</h4>
+        <span>CEO</span>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img src="images/equipo-azucena.png" alt="Azucena Flores, Directora Comercial de Your International Choice"></div>
+        <h4>Azucena Flores</h4>
+        <span>Directora Comercial</span>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img src="images/equipo-melany.png" alt="Melany Vasco, Asesora Académica de Your International Choice"></div>
+        <h4>Melany Vasco</h4>
+        <span>Asesora Académica</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stories">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Historias YIC</span>
+      <h2>Experiencias que transforman</h2>
+      <p>Resultados reales de nuestros estudiantes en competencias e intercambios internacionales.</p>
+    </div>
+    <div class="story-card">
+      <div class="quote-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 6C6 6.8 4 9.3 4 12.6c0 2.4 1.6 4.1 3.6 4.1 1.8 0 3.2-1.4 3.2-3.1 0-1.6-1.1-2.9-2.6-3.1.3-1.4 1.6-2.6 3.3-3.1L9.5 6zm9 0c-3.5.8-5.5 3.3-5.5 6.6 0 2.4 1.6 4.1 3.6 4.1 1.8 0 3.2-1.4 3.2-3.1 0-1.6-1.1-2.9-2.6-3.1.3-1.4 1.6-2.6 3.3-3.1L18.5 6z"/></svg></div>
+      <p>Primer lugar en una de las competencias académicas internacionales más importantes del año, enfrentando a estudiantes de distintos países y demostrando el talento ecuatoriano en un escenario global. Con Your International Choice no solo organizamos programas en el exterior: ayudamos a que los estudiantes vivan experiencias que transforman su futuro.</p>
+      <div class="who">Delegación APCh <span>Global Academic Championship 2026</span></div>
+    </div>
+    <p class="story-note">Sección lista para incorporar testimonios directos de estudiantes (nombre, edad y programa) en cuanto los compartas.</p>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow" style="color:var(--gold);">Hablemos</span>
+      <h2>Entra en contacto con nuestros especialistas</h2>
+      <p>No pierdas la oportunidad de dar el siguiente paso en tu carrera internacional. Escríbenos y te asesoramos sin costo.</p>
+      <div class="contact-item">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <div><h5>Oficina</h5><p>Edificio Plaza San Sebastián, Piso 2, Local 9 — Calle Isla San Cristóbal, San Rafael, Valle de los Chillos, Sangolquí, Ecuador</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0-.6.4-1 1-1h3l2 5-2 1.5a11 11 0 005 5L14.5 14l5 2v3c0 .6-.4 1-1 1C10.5 20 4 13.5 4 5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+        <div><h5>WhatsApp / Teléfono</h5><p>+593 96 790 4455</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="icon-wrap ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M4 6.5l8 6.2 8-6.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h5>Correo</h5><p>info@yourinternationalchoice.com</p></div>
+      </div>
+      <div class="social-row">
+        <a href="https://www.facebook.com/Yourinternationalchoice" target="_blank" rel="noopener" aria-label="Facebook"><img src="iconos redes/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/yourinternationalchoice/" target="_blank" rel="noopener" aria-label="Instagram"><img src="iconos redes/instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@yourinternationalchoice" target="_blank" rel="noopener" aria-label="TikTok"><img src="iconos redes/tiktok.png" alt="TikTok"></a>
+        <a href="https://www.linkedin.com/company/your-international-choice/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="iconos redes/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://wa.me/593967904455" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="iconos redes/whatsapp.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <!-- Formulario de registro Kommo CRM -->
+      <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1723935",hash:"d3aa49e25ada66a8251eef22d88678cf",locale:"es"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script>
+      <script id="amoforms_script_1723935" async="async" charset="utf-8" src="https://forms.kommo.com/forms/assets/js/amoforms.js?1786572423"></script>
+      <p class="form-note">Al enviar tus datos, un asesor de Your International Choice se pondrá en contacto contigo.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="images/logo-yic.png" alt="Logo YIC">
+          <span>Your International Choice</span>
+        </div>
+        <p style="max-width:320px;font-size:.9rem;">Agencia de estudios en el exterior en Ecuador. Programas internacionales que inspiran, desde 9 años hasta adultos.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/Yourinternationalchoice" target="_blank" rel="noopener" aria-label="Facebook"><img src="iconos redes/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/yourinternationalchoice/" target="_blank" rel="noopener" aria-label="Instagram"><img src="iconos redes/instagram.png" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/@yourinternationalchoice" target="_blank" rel="noopener" aria-label="TikTok"><img src="iconos redes/tiktok.png" alt="TikTok"></a>
+          <a href="https://www.linkedin.com/company/your-international-choice/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="iconos redes/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+      <div>
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#programas">Programas</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <ul>
+          <li>Sangolquí, Ecuador</li>
+          <li>+593 96 790 4455</li>
+          <li>info@yourinternationalchoice.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Your International Choice. Todos los derechos reservados.</span>
+      <span>#YICECUADOR</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Menú móvil
+  document.querySelector('.burger').addEventListener('click', function(){
+    var nav = document.querySelector('nav ul');
+    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    nav.style.cssText += 'flex-direction:column;position:absolute;top:74px;right:24px;background:#fff;padding:24px;border-radius:14px;box-shadow:0 12px 30px rgba(19,39,64,.15);';
+  });
+</script>
+
+</body>
+</html>
