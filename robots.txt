@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://margarita16-byte.github.io/landing-page-yic/sitemap.xml
